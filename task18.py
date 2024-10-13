@@ -1,11 +1,10 @@
-input_data=open("input.txt","r")
+input_data=open("input.txt","r")#data=data.split()n=int(data[0])
 data =input_data.read()
 output_data=open("output.txt","a")
-data=data.split()
-n=int(data[0])
-f=int(data[1])
-for i in range(0,1000):
-    f=f*i
-output_data.write(str(f))
+def factorial(n):
+        if(n==0):
+                return 1
+        else: return n*factorial(n-1)
+        output_data.write(str(n))
 input_data.close()
 output_data.close()
